@@ -1,0 +1,123 @@
+/**************** 設定  *********************/
+$pc: 1280px;
+$tab: 768px;
+$sp: 480px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+body,html {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  background-color: #fff;
+  word-wrap: break-word;
+  text-size-addjust: 100%;
+  padding: 0;
+  margin: 0;
+}
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/************** end 設定 ***********************/
+
+
+.container {
+  background-color: #EFEFEF;
+  text-align: center;
+  .container-inner {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    @include tab {
+      width: 90%;
+      padding: 3%;
+    }
+    @include sp {
+      width: 90%;
+      padding: 3%;
+    }
+  }
+  .header {
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    height: 648px;
+    background-image: url("/Users/sakieishikawa/Desktop/workspace/tokyo/img/mv/mv.png");
+    background-size: cover;
+    position: relative;
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      background: #C4C7CD;
+    }
+    .nav-item {
+    margin-right: 40px;
+    }
+    .header-right-contents {
+      position: absolute;
+      right: 50px;
+      bottom: 164px;
+      width: 38.36%;
+      text-align: left;
+      vertical-align: middle;
+      .header-title {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: '游ゴシック';
+      }
+      .txt {
+        font-style: 18px;
+        font-weight: normal;
+      }
+      .contact-btn {
+        display: inline-block;
+      }
+      .contact-link {
+        display: block;
+        background-color: #FFAA3B;
+        color: #fff;
+        box-shadow: 0px 3px 5px #3E3E3E;
+        border-radius: 10px;
+        height: 51px;
+        width: 280px;
+        line-height: 51px;
+        text-align: center;
+        font-weight: bold;
+        font-style: 18px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }//--end header
+}//--end container
