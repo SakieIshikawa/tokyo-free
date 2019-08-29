@@ -1,0 +1,30 @@
+/**************** 設定  *********************
+$pc: 1280px;
+$tab: 768px;
+$sp: 480px;
+*************************************/
+
+body,html {
+  font-family: 'Lato', 'Noto Sans JP', 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック’,
+　 YuGothic,'Yu Gothic','メイリオ', Meiryo,'MS Pゴシック','MS PGothic’;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  background-color: #fff;
+  word-wrap: break-word;
+  text-size-addjust: 100%;
+}
+.header {
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.header-menu {
+  display: flex;
+  list-style-type: none;
+}
+.header-item {
+  margin-right: 40px;
+}
