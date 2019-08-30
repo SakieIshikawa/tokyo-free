@@ -155,7 +155,7 @@ a {
   font-family: 'Montserrat';
   padding: 130px 0;
   margin: 0 auto;
-  .container-inner {
+  .news-inner {
     width: 86.36%;
     height: 655px;
     max-width: 100%;
@@ -171,7 +171,7 @@ a {
       padding: 3%;
     }
   }
-  .container-title {
+  .news-title {
     font-size: 36px;
     font-weight: bold;
     padding: 60px;
@@ -227,3 +227,57 @@ a {
     font-size: 20px;
   }
 }//--end container
+.service-container {
+  text-align: center;
+  height: 655px;
+  background: linear-gradient(180deg,#3E3E3E 0%,#3E3E3E 400px,#F3F3F3 400px,#F3F3F3 100%);
+  font-family: 'Montserrat';
+  margin: 0 auto;
+  .service-inner {
+    width: 70.27%;
+    height: 321px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 4.23%;
+    background: #fff;
+    box-shadow: 0px 5px 12px #3E3E3E;
+    @include tab {
+      width: 90%;
+      padding: 3%;
+    }
+    @include sp {
+      width: 90%;
+      padding: 3%;
+    }
+  }
+  .service-title {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 80px;
+    line-height: 1.2;
+    color: #fff;
+    display: inline-block;
+  }
+  .service-lists {
+    margin-bottom: 40px;
+    font-weight: normal;
+    color: #3E3E3E;
+    position: relative;
+    align-items: center;
+    display: flex;
+    .service-list {
+      padding: 40px 0;
+      vertical-align: middle;
+    }
+    .service-txt {
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 4px;
+      color: #3E3E3E;
+      font-size: 20px;
+    }
+    .service-txt2 {
+
+    }
+  }
+}
