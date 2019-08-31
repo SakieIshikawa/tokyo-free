@@ -67,7 +67,7 @@ a {
 .pc-disnone {
   display: none;
   @include sp {
-      display: block;
+    display: block;
   }
 }
 // SPでは非表示にさせ、PCでは表示させる切り替え用クラス
@@ -75,7 +75,7 @@ a {
 .sp-disnone {
   display: block;
   @include sp {
-      display: none; 
+    display: none; 
   }
 } 
 // 全要素に対してbox-sizing:border-box;を指定
@@ -323,41 +323,41 @@ a {
         &:last-of-type {
           margin-right: 0;
         }
-      .results-img {
-        height: 234px;
-        width: 100%;
-        display: block;
+        .results-img {
+          height: 234px;
+          width: 100%;
+          display: block;
+        }
+        .results-box {
+          background-color: #fff;
+          color:#3E3E3E;
+          padding: 20px;
+          .results-txt {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+          }
+          .results-txt2 {
+            font-size: 16px;
+            letter-spacing: 0.01px;
+          }
+        }
       }
-      .results-box {
+    }
+    .pagenation-lists {
+      text-align: left;
+      display: flex;
+      margin-left: 8.64%;
+      margin-bottom: 48px;
+      .pagenation-list {
+        width: 12px;
+        height: 12px;
         background-color: #fff;
-        color:#3E3E3E;
-        padding: 20px;
-      .results-txt {
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 1.3;
-        margin-bottom: 20px;
-      }
-      .results-txt2 {
-        font-size: 16px;
-        letter-spacing: 0.01px;
+        border-radius: 50%;
+        margin-right: 16px;
       }
     }
-    }
-  }
-  .pagenation-lists {
-    text-align: left;
-    display: flex;
-    margin-left: 8.64%;
-    margin-bottom: 48px;
-    .pagenation-list {
-      width: 12px;
-      height: 12px;
-      background-color: #fff;
-      border-radius: 50%;
-      margin-right: 16px;
-    }
-  }
     .results-btn {
       border: 1px solid #fff;
       height: 64px;
@@ -380,38 +380,38 @@ a {
   .price-inner {
     width: 70.27%;
     padding: 0 4.23%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-    @include tab {
-      width: 90%;
-      padding: 3%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  @include tab {
+    width: 90%;
+    padding: 3%;
+  }
+  @include sp {
+    width: 90%;
+    padding: 3%;
+  }
+  .price-title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #3E3E3E;
+    font-weight: bold;
+    margin-bottom: 80px;
+  }
+  .price-dl {
+    font-weight: bold;
+  }
+  .price-box {
+    display: flex;
+    border: 1px solid #707070;
+    height: 60px;
+    line-height: 60px;
+    &:nth-of-type(2) {
+      border-bottom: none;
     }
-    @include sp {
-      width: 90%;
-      padding: 3%;
+    &:nth-of-type(1) {
+      border-bottom: none;
     }
-    .price-title {
-      font-size: 36px;
-      line-height: 1.2;
-      color: #3E3E3E;
-      font-weight: bold;
-      margin-bottom: 80px;
-    }
-    .price-dl {
-      font-weight: bold;
-    }
-    .price-box {
-      display: flex;
-      border: 1px solid #707070;
-      height: 60px;
-      line-height: 60px;
-      &:nth-of-type(2) {
-        border-bottom: none;
-      }
-      &:nth-of-type(1) {
-        border-bottom: none;
-      }
     .price-dt {
       width: 30%;
       background-color: #3e3e3e;
@@ -426,4 +426,98 @@ a {
     text-align: left;
     font-size: 14px;
   }
+}
+
+.comments-container {
+  height: 746px;
+  text-align: center;
+  font-family: 'Montserrat';
+  background: linear-gradient(180deg,#f3f3f3 0%,#f3f3f3 130px, #3E3E3E 130px,#3e3e3e 100%);
+  position: relative;
+  .comments-inner {
+    height: 616px;    
+    width: 86.45%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 6.8%;
+    display: flex;
+    @include tab {
+      width: 90%;
+      padding: 3%;
+    }
+    @include sp {
+      width: 90%;
+      padding: 3%;
+    }
+    .comments-box {
+      width: 54.57%;
+      background-color: #fff;
+      padding: 40px;
+    .comments-title {
+      font-size: 36px;
+      line-height: 1.2;
+      color: #3E3E3E;
+      text-align: left;
+      font-weight: bold;
+      margin: 40px 0 80px;
+    }
+    .comments-lists {
+      .comments-list {
+        display: flex;
+        margin-bottom: 80px;
+      }
+      .comments-img {
+        margin-right: 50px;
+      }
+      .comments-txt {
+        font-size: 16px;
+      }
+    }
+  }//-- end box
+  .comments-box-right {
+    width: 45.5%;
+    position: relative;
+    .comments-img-right {
+      width: 100%;
+      height: 450px;
+      position: absolute;
+      left: 0;
+      top: 126px;
+    }
   }
+  }//--end inner
+}//--end comments-container
+.question-container {
+  height: 1065px;
+  background-image: url(/Users/sakieishikawa/Desktop/workspace/tokyo/img/sunyu-kim-1053375-unsplash/sunyu-kim-1053375-unsplash.png);
+  background-size:  cover;
+  position: relative;
+  .question-inner {
+    .question-title {
+      font-size: 36px;
+      text-align: center;
+      padding: 80px;
+    }
+    .question-lists {
+      width: 45.09%;
+      position: absolute;
+      right: 8.05%;
+      .question-list {
+        margin-bottom: 40px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px 2.92%;
+      .q {
+        margin-bottom: 20px;
+      }
+      .a {
+        background-color: #D7E1FF;
+        border-radius: 10px;
+        padding: 18px;
+      }
+    }
+    }
+  }
+}
